@@ -14,18 +14,18 @@ public class Handicapped extends Spot implements parking {
 	double cost = 0;
 	String type = "Handicapped";
 
-	public Handicapped(boolean open,int loc) {
+	public Handicapped(boolean open, int loc) {
 		super(open, location);
-		super.open=open;
-		super.location=loc;
-		
+		super.open = open;
+		super.location = loc;
+
 	}
 
 	public String toString() {
 		String r;
 		r = super.toString();
 		if (super.open) {
-			r = r + ", " + this.type + " x " + super.hour + " hours, Cost = "
+			r = r + this.type + " x " + super.hour + " hours, Cost = "
 					+ super.hour * this.cost;
 		} else {
 			r = r + "Empty";
