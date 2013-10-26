@@ -25,7 +25,7 @@ public class Handicapped extends Spot implements parking {
 		String r;
 		r = super.toString();
 		if (super.open) {
-			r = r + this.type + " x " + super.hour + " hours, Cost = "
+			r = r + this.type + " x " + super.hour + " hours, Cost = $"
 					+ super.hour * this.cost;
 		} else {
 			r = r + "Empty";
