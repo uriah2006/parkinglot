@@ -24,7 +24,7 @@ public class main {
 			}
 		}
 		for (i = 1; i <= 20; i++) {
-			if (i < 5) {
+			if (i <= 5) {
 				Spot place = new Handicapped(used.contains(Integer.valueOf(i)), i);
 				garage.add(place);
 			} else {
