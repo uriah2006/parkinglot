@@ -7,6 +7,8 @@
  *  
  *  the time used (hour) is generated only if the spot is being used
  *  hour is a randomly generated number from 0 to 24  
+ *  
+ *  hour also has a getter and a setter for future use
  */
 package parkinglot;
 
@@ -22,6 +24,14 @@ public class Spot {
 		if (this.open) {
 			this.hour = (int) (Math.random() * 24);
 		}
+	}
+
+	public int getHour() {
+		return hour;
+	}
+
+	public void setHour(int hour) {
+		this.hour = hour;
 	}
 
 	public String toString() {

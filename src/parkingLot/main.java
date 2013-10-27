@@ -2,7 +2,7 @@
  * 10/26/2013
  *
  * creates a array list of 20 Spots 
- * 
+ * 10 spots selected at random will be filled 
  */
 package parkinglot;
 
