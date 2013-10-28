@@ -11,13 +11,19 @@ package parkinglot;
 
 public class Regular extends Spot implements parking {
 
-	double cost = 0.5;
+	double price = 0.5;
 	String type = "Regular";
+	String cost;
 
 	public Regular(boolean open, int loc) {
 		super(open, location);
 		super.open = open;
 		super.location = loc;
+		if (!(super.hour % 2 == 0)) {
+			this.cost = String.format("%.2f", this.price * super.hour);
+		} else {
+			this.cost = Integer.toString((int) (this.price * super.hour));
+		}
 	}
 
 	public String toString() {
@@ -25,7 +31,7 @@ public class Regular extends Spot implements parking {
 		r = super.toString();
 		if (super.open) {
 			r = r + this.type + " x " + super.hour + " hours, Cost = $"
-					+ super.hour * this.cost;
+					+ this.cost;
 		} else {
 			r = r + "Empty";
 		}

@@ -11,14 +11,15 @@ package parkinglot;
 
 public class Handicapped extends Spot implements parking {
 
-	double cost = 0;
+	double price = 0;
 	String type = "Handicapped";
+	String cost;
 
 	public Handicapped(boolean open, int loc) {
 		super(open, location);
 		super.open = open;
 		super.location = loc;
-
+		this.cost=Integer.toString((int) (this.price*super.hour));
 	}
 
 	public String toString() {
@@ -26,7 +27,7 @@ public class Handicapped extends Spot implements parking {
 		r = super.toString();
 		if (super.open) {
 			r = r + this.type + " x " + super.hour + " hours, Cost = $"
-					+ super.hour * this.cost;
+					+ this.cost;
 		} else {
 			r = r + "Empty";
 		}
